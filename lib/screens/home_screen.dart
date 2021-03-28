@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
           SliverToBoxAdapter(
             child: ContentList(
               key: PageStorageKey('originals'),
-              title: 'Netflix Originals',
+              title: 'Naeflix Originals',
               contentList: originals,
               isOriginals: true,
             ),
