@@ -49,7 +49,10 @@ class ContentList extends StatelessWidget {
                     width: isOriginals ? 200.0 : 130.0,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        image: AssetImage(content.imageUrl),
+                        image: AssetImage(
+                          content.imageUrl,
+                        ),
+                        fit: BoxFit.cover,
                       ),
                     ),
                   ),
