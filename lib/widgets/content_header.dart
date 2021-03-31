@@ -58,52 +58,80 @@ class _ContentHeaderState extends State<ContentHeader> {
           Container(
             height: 500.0,
             decoration: const BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Colors.black, Colors.transparent],
-                begin: Alignment.bottomCenter,
-                end: Alignment.topCenter,
-              ),
-            ),
-          ),
-          Positioned(
-              bottom: 110.0,
-              child: SizedBox(
-                width: 250.0,
-                child: Text(
-                  'RWANDA IS CLEAN',
-                  style: Theme.of(context).textTheme.headline1.copyWith(
-                        fontSize: 30,
-                        color: Colors.white,
-                      ),
+                // gradient: LinearGradient(
+                //   colors: [Colors.black, Colors.transparent],
+                //   begin: Alignment.bottomCenter,
+                //   end: Alignment.topCenter,
+                // ),
                 ),
-              )),
+          ),
+          // Positioned(
+          //   bottom: 110.0,
+          //   child: SizedBox(
+          //     width: 250.0,
+          //     child: Text(
+          //       'SOS PSA',
+          //       textAlign: TextAlign.center,
+          //       style: Theme.of(context).textTheme.headline1.copyWith(
+          //             fontSize: 30,
+          //             color: Colors.white,
+          //           ),
+          //     ),
+          //   ),
+          // ),
+
           Positioned(
             left: 0,
             right: 0,
-            bottom: 40.0,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            bottom: 25.0,
+            child: Column(
               children: [
-                VerticalIconButton(
-                  icon: Icons.add,
-                  title: 'List',
-                  onTap: () => print('My list'),
+                Divider(
+                  height: 2,
+                  color: Colors.grey.withOpacity(0.8),
                 ),
-                // GestureDetector(
-                //   onTap: () => setState(() {
-                //     isPlaying = !isPlaying;
-                //     _videoController.value.isPlaying
-                //         ? _videoController.pause()
-                //         : _videoController.play();
-                //   }),
-                //   child: _PlayButton(
-                //     isPlaying: isPlaying,
-                //   ),
-                // ),
-                VerticalIconButton(
-                  icon: Icons.info_outline,
-                  title: 'List',
-                  onTap: () => print('My list'),
+                Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      VerticalIconButton(
+                        icon: Icons.add,
+                        title: 'List',
+                        onTap: () => print('My list'),
+                      ),
+                      Text(
+                        'SOS PSA',
+                        textAlign: TextAlign.center,
+                        style: Theme.of(context).textTheme.headline1.copyWith(
+                              fontSize: 30,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
+                      ),
+
+                      // GestureDetector(
+                      //   onTap: () => setState(() {
+                      //     isPlaying = !isPlaying;
+                      //     _videoController.value.isPlaying
+                      //         ? _videoController.pause()
+                      //         : _videoController.play();
+                      //   }),
+                      //   child: _PlayButton(
+                      //     isPlaying: isPlaying,
+                      //   ),
+                      // ),
+                      VerticalIconButton(
+                        icon: Icons.info_outline,
+                        title: 'More Info',
+                        onTap: () => print('My list'),
+                      ),
+                    ],
+                  ),
+                ),
+                Divider(
+                  height: 2,
+                  color: Colors.grey.withOpacity(0.8),
                 ),
               ],
             ),
@@ -122,7 +150,7 @@ class _ContentHeaderState extends State<ContentHeader> {
               },
               child: Icon(
                 isMuted ? Icons.volume_off : Icons.volume_up,
-                color: Colors.white,
+                color: Colors.black,
               ),
             ),
           )
